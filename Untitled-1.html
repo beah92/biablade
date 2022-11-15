@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+</head>
+<body>
+    
+<h1>Relatório de vendas</h1>
+<h3>Coxinha</h3>
+
+Quantas vendeu?<br/>
+<input id="qntcoxinha" type = "number"/><br/>
+<br/><br/>
+<button onclick = "calculos()">Calcular</button>
+<br/><br/>
+a quantidade de coxinhas vendidas ao todo é: <resulcox></resulcox>
+<br/><br/>
+o lucro do dia é: <lucro></lucro>
+<script>
+    var qntcoxinha = document.querySelector('#qntcoxinha')
+    var resultadocox = document.querySelector('resulcox')
+    var lucro = document.querySelector('lucro')
+    
+    function calculos(){
+      resultadocox.innerHTML =  Number(resultadocox.innerHTML) + Number(qntcoxinha.value)
+      lucro.innerHTML = Number(resultadocox.innerHTML) * 1.50
+       
+    }
+
+
+</script>
+
+</body>
+</html>
